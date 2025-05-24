@@ -5,9 +5,12 @@
     "jsx": "react-jsx",
     "strict": true,
     "moduleResolution": "Node",
+    "noImplicitAny": true,
+     "noImplicitReturns": true,  
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["src", "src/main.tsx", "src/App.tsx"]
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
 }

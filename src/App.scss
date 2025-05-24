@@ -1,0 +1,10 @@
+body {
+  margin: 0px;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
+  padding: 20px 0;
+}
