@@ -27,6 +27,8 @@
   &__image {
     width: 100%;
     border-radius: 20px;
+    aspect-ratio: 1 / 1;
+    background-color: #dfbfbf57;
 
     @media screen and (max-width: 600px) {
       order: -1;

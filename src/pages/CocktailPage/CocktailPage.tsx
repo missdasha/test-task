@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useCocktailsStore } from '../../store';
 import { CocktailInfo } from '../../components/CocktailInfo/CocktailInfo';
+import { Loader } from '../../components/Loader/Loader';
 import { isCocktailName } from '../../utils';
 import { CocktailName } from '../../models/cocktail';
 import './CocktailPage.scss';
@@ -24,7 +25,7 @@ const CocktailPage = () => {
   const cocktail = cocktails[cocktailName as CocktailName];
 
   if (isLoading) {
-    return <p>Loading...</p>;
+    return <Loader />;
   }
 
   if (error) {

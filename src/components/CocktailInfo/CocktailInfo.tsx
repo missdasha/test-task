@@ -6,15 +6,7 @@ interface CocktailListProps {
 }
 
 const CocktailInfo = ({ cocktail }: CocktailListProps) => {
-  const {
-    strDrink,
-    strCategory,
-    strAlcoholic,
-    strGlass,
-    strInstructions,
-    ingredients,
-    strDrinkThumb,
-  } = cocktail;
+  const { strDrink, strCategory, strAlcoholic, strGlass, strInstructions, ingredients, strDrinkThumb } = cocktail;
 
   return (
     <div className="cocktail-info">
@@ -37,12 +29,7 @@ const CocktailInfo = ({ cocktail }: CocktailListProps) => {
           ))}
         </ul>
       </div>
-      <img
-        className="cocktail-info__image"
-        src={strDrinkThumb}
-        alt={strDrink}
-        loading="lazy"
-      />
+      <img className="cocktail-info__image" src={strDrinkThumb} alt={strDrink} loading="lazy" />
     </div>
   );
 };

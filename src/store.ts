@@ -1,9 +1,5 @@
 import { create } from 'zustand';
-import {
-  CocktailInfoState,
-  CocktailName,
-  CocktailsResponse,
-} from './models/cocktail';
+import { CocktailInfoState, CocktailName, CocktailsResponse } from './models/cocktail';
 import { Nullable } from './models/common';
 import { transformCocktail } from './utils';
 
@@ -30,9 +26,7 @@ const useCocktailsStore = create<Store>((set, get) => ({
       set({ isLoading: true, error: null });
 
       try {
-        const res = await fetch(
-          `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${cocktailName}`,
-        );
+        const res = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${cocktailName}`);
 
         if (!res.ok) {
           throw new Error('Failed to fetch cocktail');

@@ -12,9 +12,7 @@ const Sidebar = () => {
           <li key={menuItem} className="menu-item">
             <NavLink
               to={`/${menuItem}`}
-              className={({ isActive }) =>
-                `menu-item__link ${isActive ? 'menu-item__link_active' : ''}`
-              }
+              className={({ isActive }) => `menu-item__link ${isActive ? 'menu-item__link_active' : ''}`}
             >
               {capitalize(menuItem)}
             </NavLink>
